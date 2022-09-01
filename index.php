@@ -2,14 +2,15 @@
 
 require __DIR__ . '/autoload.php';
 
-$lastThree = \App\Models\Article::findLastThree();
-
 $article = new \App\Models\Article();
 
-$article->title = 'Заголовок новости';
-$article->content = 'Какой-то текст';
+$article->id = 39;
+$article->title = 'Заголовок новости new 1001';
+$article->content = 'Какой-то текст 33';
 
-$article->insert();
+$article->delete();
+
+$lastThree = \App\Models\Article::findLastThree();
 
 include __DIR__ . '/templates/news.php';
 
