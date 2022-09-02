@@ -12,7 +12,7 @@
 
 <?php
 
-foreach ($lastThree as $article) { ?>
+foreach ($this->data['news'] as $article) { ?>
     <article>
         <a href="article.php?id=<?php echo $article->id; ?>"> <?php echo $article->title; ?></a><br>
         <?php echo $article->content; ?> <br><br>

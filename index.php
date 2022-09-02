@@ -2,16 +2,18 @@
 
 require __DIR__ . '/autoload.php';
 
-$article = new \App\Models\Article();
+$aricle = new \App\Models\Article();
+$view = new \App\View();
 
-$article->id = 39;
-$article->title = 'Заголовок новости new 1001';
-$article->content = 'Какой-то текст 33';
+$view->set('news', $aricle::findAll());
+$view->display(__DIR__ . '/templates/news.php');
 
-$article->delete();
+//$article->id = 39;
+//$article->title = 'Заголовок новости new 1001';
+//$article->content = 'Какой-то текст 33';
+//
+//$article->delete();
 
-$lastThree = \App\Models\Article::findLastThree();
-
-include __DIR__ . '/templates/news.php';
+//include __DIR__ . '/templates/news.php';
 
 
