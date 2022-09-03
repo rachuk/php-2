@@ -17,6 +17,9 @@
             <input type="hidden" name="id" value="<?php echo $article->id; ?>">
             <input type="text" name="title" value="<?php echo $article->title; ?>"><br><br>
             <textarea name="content" cols="30" rows="10"><?php echo $article->content; ?></textarea><br><br>
+            <input type="text" name="author" value="<?php if (isset($article->author->name)): ?>
+<?php echo $article->author->name; ?><?php endif; ?>"><br><br>
+<!--            <input type="text" name="author" value="--><?php //echo $article->author->name; ?><!--"><br><br>-->
             <button type="submit">Редактировать</button>
         </form>
         <?php

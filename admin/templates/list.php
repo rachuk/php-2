@@ -15,9 +15,12 @@
 <hr>
 <?php
 
-foreach ($this->data['news'] as $article) { ?>
+foreach ($this->news as $article) { ?>
     <h3><?php echo $article->title; ?></h3>
     <div><?php echo $article->content ?></div><br>
+    <?php if (isset($article->author->name)): ?>
+        <td><?php echo $article->author->name; ?></td>
+    <?php endif; ?>
     <form action="delete.php" method="post">
         <input type="hidden" name="id" value="<?php echo $article->id; ?>">
         <input type="submit" value="Удалить статью">

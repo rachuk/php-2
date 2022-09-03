@@ -24,7 +24,7 @@ abstract class Model
         if (!empty($data)) {
             return $data[0];
         }
-        return $data;
+        return false;
     }
 
     public static function findLastThree()
