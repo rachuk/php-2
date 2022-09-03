@@ -13,6 +13,7 @@
     <form action="add.php" method="POST" enctype="multipart/form-data">
         <input type="text" name="title" value=""><br><br>
         <textarea name="content" cols="30" rows="10"></textarea><br><br>
+        <input type="text" name="author" value=""><br>
         <button type="submit">Добавить</button>
     </form>
 </div>

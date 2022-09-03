@@ -1,3 +1,7 @@
+<?php
+    /** @var \App\View $this */
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,16 +12,19 @@
     <title>News</title>
 </head>
 <body>
-<h1>News' list</h1>
 
-<?php
+    <h1>News' list</h1>
 
-foreach ($this->data['news'] as $article) { ?>
-    <article>
-        <a href="article.php?id=<?php echo $article->id; ?>"> <?php echo $article->title; ?></a><br>
-        <?php echo $article->content; ?> <br><br>
-    </article>
-<?php } ?>
+    <?php foreach ($this->news as $article) { ?>
+        <article>
+            <h2><a href="article.php?id=<?php echo $article->id; ?>"> <?php echo $article->title; ?></a></h2>
+            <p><?php echo $article->content; ?></p>
+        <?php if (isset($article->author->name)): ?>
+            <td><?php echo $article->author->name; ?></td>
+        <?php endif; ?>
+        </article>
+        <hr>
+    <?php } ?>
 
 </body>
 </html>
