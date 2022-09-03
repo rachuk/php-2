@@ -2,15 +2,18 @@
 
 require __DIR__ . '/autoload.php';
 
-$lastThree = \App\Models\Article::findLastThree();
+$aricle = new \App\Models\Article();
+$view = new \App\View();
 
-$article = new \App\Models\Article();
+$view->set('news', $aricle::findAll());
+$view->display(__DIR__ . '/templates/news.php');
 
-$article->title = 'Заголовок новости';
-$article->content = 'Какой-то текст';
+//$article->id = 39;
+//$article->title = 'Заголовок новости new 1001';
+//$article->content = 'Какой-то текст 33';
+//
+//$article->delete();
 
-$article->insert();
-
-include __DIR__ . '/templates/news.php';
+//include __DIR__ . '/templates/news.php';
 
 
