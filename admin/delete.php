@@ -4,7 +4,6 @@ use App\Models\Article;
 
 require __DIR__ . '/../autoload.php';
 
-var_dump($_POST);
 if (isset($_POST['id']) && is_numeric($_POST['id'])) {
     $article = Article::findById($_POST['id']);
 

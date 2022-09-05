@@ -11,7 +11,8 @@ class Db
     {
         $config = Config::getInstance();
         $this->dbh = new \PDO(
-            'mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['dbname'], $config->data['db']['user'], $config->data['db']['password'],
+            'mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['dbname'],
+            $config->data['db']['user'], $config->data['db']['password'],
         );
     }
 

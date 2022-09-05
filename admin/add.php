@@ -13,4 +13,4 @@ if (!empty($_POST['title']) && !empty($_POST['content'])) {
     header('Location: list.php');
 }
 
-include __DIR__ . '/templates/add.php';
+include __DIR__ . '/admin/add.php';

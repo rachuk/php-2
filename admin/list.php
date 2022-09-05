@@ -6,6 +6,6 @@ $article = new \App\Models\Article();
 $view = new \App\View();
 
 $view->news = $article::findAll();
-$view->display(__DIR__ . '/templates/list.php');
+$view->display(__DIR__ . '/admin/list.php');
 
 

@@ -8,7 +8,7 @@
     <title><?php echo $this->article->title; ?></title>
 </head>
 <body>
-<a href="index.php"><h1> New's list</h1></a>
+<a href="/"><h1> New's list</h1></a>
 
 <h2><?php echo $this->article->title; ?></h2>
 

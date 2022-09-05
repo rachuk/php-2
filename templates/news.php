@@ -12,12 +12,16 @@
     <title>News</title>
 </head>
 <body>
-
+<a href="/admin/"><b>Админ-панель</b></a>
     <h1>News' list</h1>
 
     <?php foreach ($this->news as $article) { ?>
         <article>
-            <h2><a href="article.php?id=<?php echo $article->id; ?>"> <?php echo $article->title; ?></a></h2>
+            <h2>
+                <a href="/index/article/action?id=<?php echo $article->id; ?>">
+                    <?php echo $article->title; ?>
+                </a>
+            </h2>
             <p><?php echo $article->content; ?></p>
         <?php if (isset($article->author->name)): ?>
             <td><?php echo $article->author->name; ?></td>
