@@ -10,10 +10,10 @@
 <body>
 <div class="container">
     <h1>Добавить новость</h1>
-    <form action="add.php" method="POST" enctype="multipart/form-data">
+    <form action="/admin/add/action" method="POST" enctype="multipart/form-data">
         <input type="text" name="title" value=""><br><br>
         <textarea name="content" cols="30" rows="10"></textarea><br><br>
-        <input type="text" name="author" value=""><br>
+        <input type="text" name="author_id" value=""><br>
         <button type="submit">Добавить</button>
     </form>
 </div>

@@ -2,8 +2,6 @@
 
 namespace App;
 
-use JetBrains\PhpStorm\Internal\TentativeType;
-
 class View implements \Countable, \Iterator
 {
     use ViewTrate;

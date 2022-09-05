@@ -16,4 +16,4 @@ if (isset($_POST['title']) || isset($_POST['content']) || isset($_POST['author']
     $article = Article::findById($_GET['id']);
 }
 
-include __DIR__ . '/templates/edit.php';
+include __DIR__ . '/admin/edit.php';
