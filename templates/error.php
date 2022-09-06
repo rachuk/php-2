@@ -13,6 +13,5 @@
     <h1>Ошибка</h1>
     <p><?php echo $this->error; ?></p>
 </div>
-
 </body>
 </html>

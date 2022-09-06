@@ -20,6 +20,6 @@
 </article>
 
 <br>
-
+<?php echo $this->resourceUsageFormatter->resourceUsage($this->timer->stop());?>
 </body>
 </html>

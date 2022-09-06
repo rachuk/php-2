@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controller;
 use App\Exceptions\NotFoundException;
+use SebastianBergmann\Timer\ResourceUsageFormatter;
 
 class Article extends Controller
 {
@@ -22,6 +23,8 @@ class Article extends Controller
         if (empty( $this->view->article)) {
             throw new NotFoundException('Ошибка 404 - не найдено');
         }
+        $this->view->resourceUsageFormatter = new ResourceUsageFormatter();
+        $this->view->timer = $this->timer;
         $this->view->display(__DIR__ . '/../../templates/article.php');
     }
 }

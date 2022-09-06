@@ -4,6 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Controller;
 use App\Models\Article;
+use SebastianBergmann\Timer\ResourceUsageFormatter;
 
 class Edit extends Controller
 {
@@ -20,6 +21,9 @@ class Edit extends Controller
         } else {
             $this->view->article = Article::findById($_GET['id']);
         }
+
+        $this->view->resourceUsageFormatter = new ResourceUsageFormatter();
+        $this->view->timer = $this->timer;
         $this->view->display(__DIR__ . '/../../../templates/admin/edit.php');
     }
 }

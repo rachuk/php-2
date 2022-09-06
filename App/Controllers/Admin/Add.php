@@ -3,6 +3,7 @@
 namespace App\Controllers\Admin;
 
 use App\Controller;
+use SebastianBergmann\Timer\ResourceUsageFormatter;
 
 
 class Add extends Controller
@@ -19,6 +20,8 @@ class Add extends Controller
             header('Location: /admin/');
         }
 
+        $this->view->resourceUsageFormatter = new ResourceUsageFormatter();
+        $this->view->timer = $this->timer;
         $this->view->display(__DIR__ . '/../../../templates/admin/add.php');
     }
 }
