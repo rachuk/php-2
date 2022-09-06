@@ -1,0 +1,44 @@
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'news' at line 1
+Дата: 06.09.22
+Файл: /Applications/MAMP/htdocs/php-2/App/Db.php
+Строка: 27
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'news' at line 1
+Дата: 06.09.22
+Файл: /Applications/MAMP/htdocs/php-2/App/Db.php
+Строка: 27
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'news' at line 1
+Дата: 06.09.22
+Файл: /Applications/MAMP/htdocs/php-2/App/Db.php
+Строка: 27
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'news' at line 1
+Дата: 06.09.22
+Файл: /Applications/MAMP/htdocs/php-2/App/Db.php
+Строка: 27
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'news' at line 1
+Дата: 06.09.22
+Файл: /Applications/MAMP/htdocs/php-2/App/Db.php
+Строка: 27
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'news' at line 1
+Дата: 06 . 09 . 22
+Файл: /Applications/MAMP/htdocs/php-2/App/Db.php
+Строка: 27
+Ошибка 404 - не найдено
+Дата: 06 . 09 . 22
+Файл: /Applications/MAMP/htdocs/php-2/App/Controllers/Article.php
+Строка: 23
+Ошибка 404 - не найдено
+Дата: 06 . 09 . 22
+Файл: /Applications/MAMP/htdocs/php-2/App/Controllers/Article.php
+Строка: 23
+Ошибка 404 - не найдено
+Дата: 06 . 09 . 22
+Файл: /Applications/MAMP/htdocs/php-2/App/Controllers/Article.php
+Строка: 23
+Ошибка 404 - не найдено
+Дата: 06 . 09 . 22
+Файл: /Applications/MAMP/htdocs/php-2/App/Controllers/Article.php
+Строка: 23
+SQLSTATE[HY000] [1049] Unknown database 'php23'
+Дата: 06 . 09 . 22
+Файл: /Applications/MAMP/htdocs/php-2/App/Db.php
+Строка: 19

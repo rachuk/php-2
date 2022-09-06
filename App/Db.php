@@ -2,6 +2,9 @@
 
 namespace App;
 
+use App\Exceptions\DbConnectionException;
+use App\Exceptions\SqlException;
+
 class Db
 {
 
@@ -9,18 +12,27 @@ class Db
 
     public function __construct()
     {
-        $config = Config::getInstance();
-        $this->dbh = new \PDO(
-            'mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['dbname'],
-            $config->data['db']['user'], $config->data['db']['password'],
-        );
+        try {
+            $config = Config::getInstance();
+            $this->dbh = new \PDO(
+                'mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['dbname'],
+                $config->data['db']['user'], $config->data['db']['password'],
+            );
+        } catch (\PDOException $error) {
+            throw new DbConnectionException('Нет соединения с БД');
+        }
     }
 
+    /**
+     * @throws SqlException
+     */
     public function query($sql, $class, $data=[])
     {
         $sth = $this->dbh->prepare($sql);
-        $sth->execute($data);
-
+        $res = $sth->execute($data);
+        if (!$res) {
+            throw new SqlException($sql,'Запрос не может быть выполнен');
+        }
         return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
     }
 

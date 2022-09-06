@@ -2,6 +2,9 @@
 
 namespace App;
 
+use App\Controllers\Errors\FillException;
+use App\Exceptions\Errors;
+
 abstract class Model
 {
     public const TABLE = '';
@@ -101,5 +104,32 @@ abstract class Model
         $sql = 'DELETE FROM ' . $data['table'] . ' WHERE id=:id';
 
         return $db->execute($sql, [':id' => $this->id]);
+    }
+
+    /**
+     * @throws Errors
+     */
+    public function fill(array $data)
+    {
+        $errors = new Errors();
+        $props = get_object_vars($this);
+        foreach ($data as $key => $value) {
+            if (array_key_exists($key, $props)) {
+                $this->$key = $value;
+            } else {
+                $errors->add(new FillException('Свойство ' . $key . ' не найдено!'));
+            }
+
+            $validationMethod = 'validate' . ucfirst($key);
+            if (method_exists($this, $validationMethod)) {
+                $validResult = $this->$validationMethod();
+                if ($validResult) {
+                    $errors->add($validResult);
+                }
+            }
+        }
+        if ($errors->all()) {
+            throw $errors;
+        }
     }
 }
