@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controller;
+use App\Exceptions\NotFoundException;
 
 class Article extends Controller
 {
@@ -12,15 +13,15 @@ class Article extends Controller
 //        return isset($_GET['name']) && 'Vasya' == $_GET['name'];
 //    }
 
+    /**
+     * @throws NotFoundException
+     */
     public function action()
     {
-        if (isset($_GET['id'])) {
-            $id  = $_GET['id'];
-        } else {
-            header('location: /php-2/index.php');
+        $this->view->article = \App\Models\Article::findById($_GET['id']);
+        if (empty( $this->view->article)) {
+            throw new NotFoundException('Ошибка 404 - не найдено');
         }
-
-        $this->view->article = \App\Models\Article::findById($id);
         $this->view->display(__DIR__ . '/../../templates/article.php');
     }
 }
