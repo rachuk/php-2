@@ -42,3 +42,11 @@ SQLSTATE[HY000] [1049] Unknown database 'php23'
 Дата: 06 . 09 . 22
 Файл: /Applications/MAMP/htdocs/php-2/App/Db.php
 Строка: 19
+Ошибка 404 - не найдено
+Дата: 06 . 09 . 22
+Файл: /Applications/MAMP/htdocs/php-2/App/Controllers/Article.php
+Строка: 24
+Ошибка 404 - не найдено
+Дата: 06 . 09 . 22
+Файл: /Applications/MAMP/htdocs/php-2/App/Controllers/Article.php
+Строка: 24

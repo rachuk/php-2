@@ -2,15 +2,18 @@
 
 namespace App;
 
-use App\View;
+use SebastianBergmann\Timer\Timer;
 
 abstract class Controller
 {
     protected $view;
+    protected Timer $timer;
 
     public function __construct()
     {
         $this->view = new View();
+        $this->timer= new Timer();
+        $this->timer->start();
     }
 
     protected function access(): bool
